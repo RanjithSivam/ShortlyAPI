@@ -1,0 +1,50 @@
+.navbar, .navbar__left, .nav__options, .navbar__right, .navbar__title, .nav__options > li{
+    display: flex;
+    align-items: center;
+}
+
+.navbar{
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.navbar__left > .nav__options{
+    margin-left: 1rem;
+}
+
+.navbar__left > .nav__options > li, .navbar__right > .nav__options > li{
+    text-transform: capitalize;
+    margin: 0 0.5rem;
+}
+
+.navbar__left > .nav__options > li > a, .navbar__right > .nav__options > li > a{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--neutral-gray);
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+}
+
+.navbar__left > .nav__options > li > a:hover, .navbar__right > .nav__options > li > a:hover{
+    color: var(--neutral-dark-violet);
+}
+
+.navbar__right > .nav__options > li > .nav__signup{
+    background-color: var(--primary-cyan);
+    color: #fff;
+    border-radius: 1.6rem;
+    transition: all 250ms ease;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.navbar__right > .nav__options > li > .nav__signup:hover{
+    color: #fff;
+    opacity: 0.8;
+}
+
+@media screen and (max-width:1032px) {
+    .navbar{
+        display: none;
+    }
+}

@@ -1,0 +1,135 @@
+.search{
+    position: relative;
+    top: -5rem;
+}
+
+.search__container{
+    background-image: url('../images/bg-shorten-desktop.svg');
+    background-color: var(--primary-dark-violet);
+    padding: 3.5rem 2.5rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.search__box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input__field{
+    position: relative;
+    width: 100%;
+    margin-right: 0.5rem;
+}
+
+.input__field > input{
+    width: 100%;
+    padding: 0.75rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    transition: all 250ms ease;
+}
+
+.input__field > input.error{
+    border: 1px solid var(--secondary-red);
+}
+
+.input__field > small{
+    position: absolute;
+    bottom: -2.5rem;
+    font-size: 1.3rem;
+    left: 0;
+    opacity: 0;
+    color: var(--secondary-red);
+    transition: all 250ms ease;
+}
+
+.input__field > small.error{
+    opacity: 1;
+}
+
+.search__box > .go__api{
+    width: 25%;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: var(--primary-cyan);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 250ms ease;
+}
+
+.search__box > .go__api.disable__pointer{
+    pointer-events: none;
+}
+
+.search__box > .go__api:hover{
+    opacity: 0.8;
+}
+
+.result{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.5rem 0;
+    padding: 1.5rem 1.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
+}
+
+.result > .result__input > p, .result > .result__output > p{
+    font-size: 1.6rem;
+}
+
+.result > .result__output{
+    display: flex;
+    align-items: center;
+}
+
+.result > .result__output > p{
+    margin-right: 1.25rem;
+    color: var(--primary-cyan);
+}
+
+.result > .result__output > .result__copy{
+    background-color: var(--primary-cyan);
+    padding: 0.5rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.result > .result__output > .result__copy.copied{
+    background-color: var(--primary-dark-violet);
+}
+
+.result > .result__output > .result__copy:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width:1032px) {
+    .search__box{
+        flex-direction: column;
+    }
+
+    .input__field{
+        margin: 0;
+    }
+
+    .search__box > .go__api{
+        width: 100%;
+        margin-top: 3rem;
+    }
+}

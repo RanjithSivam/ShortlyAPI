@@ -1,38 +1,51 @@
-.App {
-  text-align: center;
+.app{
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    width: 80%;
+    margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.subcontent{
+    background-image: url('./images/bg-boost-desktop.svg');
+    padding: 3rem 2rem;
+    background-color: var(--primary-dark-violet);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.subcontent__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.subcontent p{
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.subcontent__button{
+    background-color: var(--primary-cyan);
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    border-radius: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: all 250ms ease;
+    font-size: 1.6rem;
+}
+
+.subcontent__button:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width:1032px) {
+    .subcontent p{
+        font-size: 2.4rem;
+    }
+
+    .subcontent__button{
+        padding: 1rem 5rem;
+    }
 }
